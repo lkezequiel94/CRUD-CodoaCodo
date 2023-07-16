@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Sobre mí{% endblock %}
+
+{% block background %}{% load static %}{% static 'img/about-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+<h1>Sobre mi!</h1>
+<span class="subheading"></span>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="d-flex align-items-center justify-content-center">
+      <img src="{% static 'img/ejemplo.jpg' %}" alt="Una foto de mi" class="img-fluid rounded-circle">
+      <p class="ms-3 p-3 text-justify">Soy un apasionado programador full-stack con una pasión desbordante por la creación de soluciones tecnológicas innovadoras. Con una sólida experiencia en el desarrollo web y habilidades en múltiples lenguajes y frameworks, me encanta enfrentar desafíos y aprender constantemente.</p>
+    </div>
+</div>
+  
+{% endblock %}

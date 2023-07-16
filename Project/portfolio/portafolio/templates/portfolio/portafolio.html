@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Portafolio{% endblock %}
+
+{% block background %}{% load static %}{% static 'img/portfolio-bg.jpg' %}{% endblock %}
+{% block headers %}
+<h1>Mi portafolio</h1>
+<span class="subheading">Bienvenido a mi portafolio. Aquí encontrarás una selección de proyectos que reflejan mi dedicación al desarrollo web y mi búsqueda por brindar experiencias digitales excepcionales. Explora mi trabajo y conoce mi pasión por la programación y la resolución de problemas.</span>
+{% endblock %}
+
+{% block content %}
+
+    {% for project in projects %}
+
+<!-- Proyecto -->
+<div class="row project">  	
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{{project.imagen.url}}" alt="">
+    </div>
+  <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">{{project.title}}</h2>   
+    <p>{{project.descripcion}}</p>
+    <p><a href="http://google.com">Más información</a></p>
+    </div>
+</div>
+</div>
+{% endfor %}
+
+{% endblock %}
